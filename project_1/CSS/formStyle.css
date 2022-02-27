@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+
+}
+.main {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-form {
+    max-width: 300px;
+    margin: 0 auto 3rem;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 10px;
+}
+
+.feedback-form h3{
+    text-align: center;
+    margin: 0;
+}
+
+.feedback-form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feedback-form .inputs .icon-input{
+    position: relative;
+}
+
+.feedback-form .inputs .icon-input input {
+    border-style: none;
+    outline-style: none;
+    background-color: #eee7e7;
+    border-radius: 16px;
+    padding: 5px;
+    width: 100%;
+    height: 32px;
+}
+
+.feedback-form .login-icon,
+.feedback-form .phone-icon,
+.feedback-form .email-icon{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.feedback-form .inputs .icon-input input[type="text"], /* тег input со значением 'text' атрибута 'type' */
+.feedback-form .inputs .icon-input input[type="password"],  /* тег input со значением 'password' атрибута 'type' */
+.feedback-form .inputs .icon-input .login-icon,
+.feedback-form .inputs .icon-input .phone-icon,
+.feedback-form .inputs .icon-input .email-icon{
+    font-size: 14px;
+    color: rgb(74, 20, 140);
+}
+
+.feedback-form .inputs .icon-input .message,
+.feedback-form .inputs .description-area .message,
+.feedback-form .inputs .icon-input input{
+    padding-left: 33px;
+}
+.feedback-form .inputs .icon-input .message,
+.feedback-form .inputs .description-area .message {
+    position: absolute;
+    height: 20px;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    color: red;
+    font-size: 12px;
+
+}
+
+.feedback-form .inputs .description-area textarea{
+    border-style: none;
+    outline-style: none;
+    background-color: #eee7e7;
+    border-radius: 16px;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+}
+
+.feedback-form .inputs .description-area{
+    position: relative;
+}
+
+.feedback-form input[type=submit]{
+    color: white;
+    background: linear-gradient(135deg, rgb(235 115 157), rgb(74, 20, 140));
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    height: 40px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+

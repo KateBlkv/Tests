@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/formStyle.css">
+    <script src="https://kit.fontawesome.com/57656fdc10.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<main class="main">
+    <div>
+        <form action="send.php" method="post" class="feedback-form" name="feedbackForm" novalidate>
+            <h3>Нам важно знать Ваше мнение!</h3>
+            <div class="inputs">
+                <input type="hidden" name="adminEmail" value="trapam@yandex.ru">
+                <div class="icon-input">
+                    <input name="name" type="text" placeholder="Введите Ваше имя" minlength="2">
+                    <span class="message"></span>
+                    <span class="login-icon"><i class="far fa-user"></i></span>
+                </div>
+                <div class="icon-input">
+                    <input name="phone" type="text" placeholder="Введите Ваш телефон">
+                    <span class="message"></span>
+                    <span class="phone-icon"><i class="fas fa-mobile-alt"></i></span>
+                </div>
+                <div class="icon-input">
+                    <input name="email" type="text" placeholder="Введите Ваш email" minlength="6">
+                    <span class="message"></span>
+                    <span class="email-icon"><i class="far fa-envelope-open"></i></span>
+                </div>
+                <div class="description-area">
+                    <textarea name="description" placeholder="Чем мы можем Вам помочь?" rows="5" ></textarea>
+                    <span class="message"></span>
+                </div>
+            </div>
+            <input type="submit" value="Отправить" id="btn" disabled>
+        </form>
+    </div>
+</main>
+<script src="JS/feedbackForm.js"></script>
+</body>
+</html>
