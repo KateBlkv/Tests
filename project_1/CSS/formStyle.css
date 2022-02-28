@@ -102,7 +102,6 @@ body {
 
 .feedback-form input[type=submit]{
     color: white;
-    background: linear-gradient(135deg, rgb(235 115 157), rgb(74, 20, 140));
     cursor: pointer;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -111,5 +110,9 @@ body {
     border-radius: 16px;
     font-size: 14px;
 }
-
-
+.on{
+    background: linear-gradient(135deg, rgb(235 115 157), rgb(74, 20, 140));
+}
+.notOn{
+    background: linear-gradient(135deg, #4f4b4b, grey);
+}

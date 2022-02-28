@@ -1,4 +1,3 @@
-
 const RULES = {
     name: [
         {
@@ -58,55 +57,33 @@ const feedbackForm = document.forms.feedbackForm;
 feedbackForm.elements.name.addEventListener('blur', function (event){
     const errorMsg = validate(event.target.value, event.target.name);
     setError(this, errorMsg);
-    switchAble();
 });
 
 feedbackForm.elements.phone.addEventListener('blur', function (event){
     const errorMsg = validate(event.target.value, event.target.name);
     setError(this, errorMsg);
-    switchAble();
 });
 
 feedbackForm.elements.email.addEventListener('blur', function (event){
     const errorMsg = validate(event.target.value, event.target.name);
     setError(this, errorMsg);
-    switchAble();
 });
 
-feedbackForm.elements.description.addEventListener('blur', function (event){
+feedbackForm.elements.description.addEventListener('input', function (event){
     const errorMsg = validate(event.target.value, event.target.name);
     setError(this, errorMsg);
-    switchAble();
 });
 
 function switchAble(){
-    const btn = document.getElementById('btn');
     const values = Object.values(checkValidation);
-    if (values.length === 4 && values.every(item => item)) {
-        btn.disabled = false;
+    if (values.length == 4 && values.some(item => item)){
+        this.disabled = false;
+        document.getElementById('btn').className='on'
+    } else{
+        this.disabled = true;
+        document.getElementById('btn').className='notOn';
     }
 }
-/*
-feedbackForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const data = new FormData();
-    data.set('name', this.elements['name'].value.trim());
-    data.set('phone', this.elements['phone'].value.trim());
-    data.set('email', this.elements['email'].value.trim());
-    data.set('adminEmail', this.elements['adminEmail'].value.trim());
-    data.set('description', this.elements['description'].value.trim());
-    fetch('send.php', {
-        method: 'POST',
-        body: data
-    })});*/
-    /*})
-
-        .then(text =>{
-            let answer=document.getElementById("answer");
-            if (text){
-                answer.innerHTML=`
-                        <p>Обращение отправлено!</p>
-                   `;
-            }
-        });
-})*/
+document.getElementById('btn').addEventListener('mouseover', function(event){
+    switchAble();
+})
